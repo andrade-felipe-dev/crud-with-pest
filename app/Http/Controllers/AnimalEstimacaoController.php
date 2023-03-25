@@ -2,12 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\AnimalEstimacao;
+use App\Camadas\UseCases\AnimalEstimacao\AnimalEstimacaoService;
+use App\Camadas\Repository\AnimalEstimacaoRepositoryInterface;
+use Illuminate\Http\Request;
 
 class AnimalEstimacaoController extends Controller
 {
-    public function listar() 
+    protected $animalEstimacaoService;
+
+    public function __construct(AnimalEstimacaoService $animalEstimacaoService)
     {
-        return response();
+        $this->animalEstimacaoService = $animalEstimacaoService; 
+    }
+
+
+    public function listar(Request $request) 
+    {
+        $listar = $this->animalEstimacaoService->listar($request->idTutor);
+        
+        return response($listar);
     }
 }

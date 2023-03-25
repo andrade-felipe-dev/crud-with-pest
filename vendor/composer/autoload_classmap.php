@@ -6,8 +6,13 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Camadas\\Entity\\EntityAnimalEstimacao' => $baseDir . '/app/Camadas/Entity/EntityAnimalEstimacao.php',
+    'App\\Camadas\\Repository\\AnimalEstimacaoRepository' => $baseDir . '/app/Camadas/Repository/AnimalEstimacaoRepository.php',
+    'App\\Camadas\\Repository\\AnimalEstimacaoRepositoryInterface' => $baseDir . '/app/Camadas/Repository/AnimalEstimacaoRepositoryInterface.php',
+    'App\\Camadas\\UseCases\\AnimalEstimacao\\AnimalEstimacaoService' => $baseDir . '/app/Camadas/UseCases/AnimalEstimacao/AnimalEstimacaoService.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\AnimalEstimacaoController' => $baseDir . '/app/Http/Controllers/AnimalEstimacaoController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
@@ -19,6 +24,7 @@ return array(
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\ValidateSignature' => $baseDir . '/app/Http/Middleware/ValidateSignature.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
+    'App\\Models\\AnimalEstimacao' => $baseDir . '/app/Models/AnimalEstimacao.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',

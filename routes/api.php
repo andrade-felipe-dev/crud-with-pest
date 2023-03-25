@@ -20,4 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/tutores', [App\Http\Controllers\TutorController::class, '']);
 
-Route::get('/animal-estimacao', [App\Http\Controllers\AnimalEstimacaoController::class, 'index']);
+Route::get('/animal-estimacao', [App\Http\Controllers\AnimalEstimacaoController::class, 'listar']);

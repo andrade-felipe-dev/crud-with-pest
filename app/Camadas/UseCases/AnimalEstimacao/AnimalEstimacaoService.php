@@ -1,12 +1,11 @@
 <?php
 namespace App\Camadas\UseCases\AnimalEstimacao;
 
+use App\Camadas\Repository\AnimalEstimacaoRepositoryInterface;
 
-use AnimalEstimacaoRepositoryInterface;
-
-class AnimalEstimacaoService implements AnimalEstimacaoInterface
+class AnimalEstimacaoService
 {
-    private $repository;
+    protected $repository;
 
     public function __construct(AnimalEstimacaoRepositoryInterface $animalEstimacaoRepositoryInterface)
     {

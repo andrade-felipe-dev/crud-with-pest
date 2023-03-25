@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('raca');
             $table->enum('sexo', ['macho', 'femea']);
             $table->float('peso');
-            $table->foreignId('id_usuario');
+            $table->foreignId('id_tutor');
         });
     }
 
