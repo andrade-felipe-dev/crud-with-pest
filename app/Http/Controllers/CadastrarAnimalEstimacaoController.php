@@ -18,16 +18,15 @@ class CadastrarAnimalEstimacaoController extends Controller
     {
         $request->validate([
             'nome' => 'required|string',
-            'dataNascimento' => 'required',
+            'dataNascimento' => 'required|date',
             'idade' => 'required|integer',
             'especie' => 'required|string',
             'raca' => 'required|string',
             'peso' => 'required',
             'idTutor' => 'required|integer'
         ]);
-        
-        dd($request->all());
 
+        dd($request->all());
         $this->cadastrarAnimalEstimacao->execute($request->all());
     }
 }
