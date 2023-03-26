@@ -1,9 +1,9 @@
 <?php
-namespace App\Camadas\UseCases\AnimalEstimacao;
+namespace App\Layers\Application;
 
-use App\Camadas\Repository\AnimalEstimacaoRepositoryInterface;
+use App\Layers\Model\AnimalEstimacaoRepositoryInterface;
 
-class AnimalEstimacaoService
+class ListarAnimalEstimacao
 {
     protected $repository;
 
@@ -12,7 +12,7 @@ class AnimalEstimacaoService
         $this->repository = $animalEstimacaoRepositoryInterface;
     }
 
-    public function listar(int $idTutor):array
+    public function execute(int $idTutor):array
     {
         return $this->repository->listar($idTutor);
     }

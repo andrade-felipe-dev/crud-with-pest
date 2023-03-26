@@ -113,6 +113,7 @@ class ComposerStaticIniteb4a76746765623aaf44be2ee43a7104
         ),
         'L' => 
         array (
+            'Lucascudo\\LaravelPtBRLocalization\\' => 34,
             'League\\MimeTypeDetection\\' => 25,
             'League\\Flysystem\\' => 17,
             'League\\Config\\' => 14,
@@ -371,6 +372,10 @@ class ComposerStaticIniteb4a76746765623aaf44be2ee43a7104
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'Lucascudo\\LaravelPtBRLocalization\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/lucascudo/laravel-pt-br-localization/src',
+        ),
         'League\\MimeTypeDetection\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/mime-type-detection/src',
@@ -505,14 +510,11 @@ class ComposerStaticIniteb4a76746765623aaf44be2ee43a7104
     );
 
     public static $classMap = array (
-        'App\\Camadas\\Entity\\EntityAnimalEstimacao' => __DIR__ . '/../..' . '/app/Camadas/Entity/EntityAnimalEstimacao.php',
-        'App\\Camadas\\Repository\\AnimalEstimacaoRepository' => __DIR__ . '/../..' . '/app/Camadas/Repository/AnimalEstimacaoRepository.php',
-        'App\\Camadas\\Repository\\AnimalEstimacaoRepositoryInterface' => __DIR__ . '/../..' . '/app/Camadas/Repository/AnimalEstimacaoRepositoryInterface.php',
-        'App\\Camadas\\UseCases\\AnimalEstimacao\\AnimalEstimacaoService' => __DIR__ . '/../..' . '/app/Camadas/UseCases/AnimalEstimacao/AnimalEstimacaoService.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
-        'App\\Http\\Controllers\\AnimalEstimacaoController' => __DIR__ . '/../..' . '/app/Http/Controllers/AnimalEstimacaoController.php',
+        'App\\Http\\Controllers\\CadastrarAnimalEstimacaoController' => __DIR__ . '/../..' . '/app/Http/Controllers/CadastrarAnimalEstimacaoController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\ListarAnimalEstimacaoController' => __DIR__ . '/../..' . '/app/Http/Controllers/ListarAnimalEstimacaoController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -523,8 +525,14 @@ class ComposerStaticIniteb4a76746765623aaf44be2ee43a7104
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Layers\\Application\\CadastrarAnimalEstimacao' => __DIR__ . '/../..' . '/app/Layers/Application/CadastrarAnimalEstimacao.php',
+        'App\\Layers\\Application\\ListarAnimalEstimacao' => __DIR__ . '/../..' . '/app/Layers/Application/ListarAnimalEstimacao.php',
+        'App\\Layers\\Infra\\AnimalEstimacaoRepository' => __DIR__ . '/../..' . '/app/Layers/Infra/AnimalEstimacaoRepository.php',
+        'App\\Layers\\Model\\AnimalEstimacaoRepositoryInterface' => __DIR__ . '/../..' . '/app/Layers/Model/AnimalEstimacaoRepositoryInterface.php',
+        'App\\Layers\\Model\\EntityAnimalEstimacao' => __DIR__ . '/../..' . '/app/Layers/Model/EntityAnimalEstimacao.php',
         'App\\Models\\AnimalEstimacao' => __DIR__ . '/../..' . '/app/Models/AnimalEstimacao.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Providers\\AnimalEstimacaoProvider' => __DIR__ . '/../..' . '/app/Providers/AnimalEstimacaoProvider.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -3096,6 +3104,7 @@ class ComposerStaticIniteb4a76746765623aaf44be2ee43a7104
         'League\\MimeTypeDetection\\GeneratedExtensionToMimeTypeMap' => __DIR__ . '/..' . '/league/mime-type-detection/src/GeneratedExtensionToMimeTypeMap.php',
         'League\\MimeTypeDetection\\MimeTypeDetector' => __DIR__ . '/..' . '/league/mime-type-detection/src/MimeTypeDetector.php',
         'League\\MimeTypeDetection\\OverridingExtensionToMimeTypeMap' => __DIR__ . '/..' . '/league/mime-type-detection/src/OverridingExtensionToMimeTypeMap.php',
+        'Lucascudo\\LaravelPtBRLocalization\\LaravelPtBRLocalizationServiceProvider' => __DIR__ . '/..' . '/lucascudo/laravel-pt-br-localization/src/LaravelPtBRLocalizationServiceProvider.php',
         'Mockery' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery.php',
         'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegration' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegration.php',
         'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegrationAssertPostConditions' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegrationAssertPostConditions.php',

@@ -2100,6 +2100,53 @@
             "install-path": "../league/mime-type-detection"
         },
         {
+            "name": "lucascudo/laravel-pt-br-localization",
+            "version": "v1.2.5",
+            "version_normalized": "1.2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lucascudo/laravel-pt-BR-localization.git",
+                "reference": "a22e2f150648813875b842b5a0608542ea9380a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lucascudo/laravel-pt-BR-localization/zipball/a22e2f150648813875b842b5a0608542ea9380a6",
+                "reference": "a22e2f150648813875b842b5a0608542ea9380a6",
+                "shasum": ""
+            },
+            "time": "2023-03-05T08:55:45+00:00",
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Lucascudo\\LaravelPtBRLocalization\\LaravelPtBRLocalizationServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Lucascudo\\LaravelPtBRLocalization\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Cascudo",
+                    "email": "lucas.sisau@gmail.com"
+                }
+            ],
+            "description": "Arquivos de linguagem em Português do Brasil (pt-BR) para Laravel >= 5.6",
+            "support": {
+                "issues": "https://github.com/lucascudo/laravel-pt-BR-localization/issues",
+                "source": "https://github.com/lucascudo/laravel-pt-BR-localization/tree/v1.2.5"
+            },
+            "install-path": "../lucascudo/laravel-pt-br-localization"
+        },
+        {
             "name": "mockery/mockery",
             "version": "1.5.1",
             "version_normalized": "1.5.1.0",

@@ -2,11 +2,11 @@
 
 namespace App\Providers;
 
-use App\Camadas\Repository\AnimalEstimacaoRepository;
-use App\Camadas\Repository\AnimalEstimacaoRepositoryInterface;
+use App\Layers\Infra\AnimalEstimacaoRepository;
+use App\Layers\Model\AnimalEstimacaoRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
 
-class RepositoryServiceProvider extends ServiceProvider
+class AnimalEstimacaoProvider extends ServiceProvider
 {
     /**
      * Register services.
