@@ -1,125 +1,155 @@
 <?php
 namespace App\Layers\Model;
 
+use App\Layers\Application\AnimalEstimacao\DTO\AnimalEstimacaoInput;
 use Illuminate\Support\Facades\Date;
 
 class EntityAnimalEstimacao
 {
     private int $id;
+
     private string $nome;
-    private Date $dataNascimento;
+    private string $dataNascimento;
     private int $idade;
     private string $especie;
     private string $raca;
     private string $sexo;
     private float $peso;
-    private int $idTutor;
 
-    public function getId()
+    public function __construct(AnimalEstimacaoInput $data) {
+        foreach($data as $key => $value) {
+            if(property_exists($this, $key)) {
+                $this->$key = $value;
+            }
+        }
+    }
+
+    /**
+     * @return int
+     */
+    public function getId(): int
     {
         return $this->id;
     }
 
-    public function setId($id)
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
     {
         $this->id = $id;
-
-        return $this;
     }
 
-    public function getNome()
+    /**
+     * @return string
+     */
+    public function getNome(): string
     {
         return $this->nome;
     }
 
-    public function setNome($nome)
+    /**
+     * @param string $nome
+     */
+    public function setNome(string $nome): void
     {
         $this->nome = $nome;
-
-        return $this;
     }
 
-    public function getDataNascimento()
+    /**
+     * @return Date
+     */
+    public function getDataNascimento(): string
     {
         return $this->dataNascimento;
     }
 
-    public function setDataNascimento($dataNascimento)
+    /**
+     * @param Date $dataNascimento
+     */
+    public function setDataNascimento(Date $dataNascimento): void
     {
         $this->dataNascimento = $dataNascimento;
-
-        return $this;
     }
 
-    public function getIdade()
+    /**
+     * @return int
+     */
+    public function getIdade(): int
     {
         return $this->idade;
     }
 
-    public function setIdade($idade)
+    /**
+     * @param int $idade
+     */
+    public function setIdade(int $idade): void
     {
         $this->idade = $idade;
-
-        return $this;
     }
 
-    public function getEspecie()
+    /**
+     * @return string
+     */
+    public function getEspecie(): string
     {
         return $this->especie;
     }
 
-    public function setEspecie($especie)
+    /**
+     * @param string $especie
+     */
+    public function setEspecie(string $especie): void
     {
         $this->especie = $especie;
-
-        return $this;
     }
 
-    public function getRaca()
+    /**
+     * @return string
+     */
+    public function getRaca(): string
     {
         return $this->raca;
     }
 
-    public function setRaca($raca)
+    /**
+     * @param string $raca
+     */
+    public function setRaca(string $raca): void
     {
         $this->raca = $raca;
-
-        return $this;
     }
 
-    public function getSexo()
+    /**
+     * @return string
+     */
+    public function getSexo(): string
     {
         return $this->sexo;
     }
 
-    public function setSexo($sexo)
+    /**
+     * @param string $sexo
+     */
+    public function setSexo(string $sexo): void
     {
         $this->sexo = $sexo;
-
-        return $this;
     }
 
-    public function getPeso()
+    /**
+     * @return float
+     */
+    public function getPeso(): float
     {
         return $this->peso;
     }
 
-    public function setPeso($peso)
+    /**
+     * @param float $peso
+     */
+    public function setPeso(float $peso): void
     {
         $this->peso = $peso;
-
-        return $this;
     }
 
-    public function getIdTutor()
-    {
-        return $this->idTutor;
-    }
-
-    public function setIdTutor($idTutor)
-    {
-        $this->idTutor = $idTutor;
-
-        return $this;
-    }
 }

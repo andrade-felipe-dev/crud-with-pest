@@ -1,8 +1,11 @@
 <?php
 namespace App\Layers\Model;
 
+use App\Layers\Application\AnimalEstimacao\DTO\AnimalEstimacaoInput;
+
 interface AnimalEstimacaoRepositoryInterface
 {
-    public function listar(int $idTutor): array;
-    public function cadastrar(): bool;
+    public function cadastrar(AnimalEstimacaoInput $animalEstimacaoInput): EntityAnimalEstimacao;
+    public function carregar(int $id): EntityAnimalEstimacao;
+    public function excluir(int $id): bool;
 }
