@@ -9,7 +9,7 @@ use App\Models\AnimalEstimacao;
 
 class AnimalEstimacaoRepository implements AnimalEstimacaoRepositoryInterface
 {
-    public function cadastrar(AnimalEstimacaoInput $animalEstimacaoInput): EntityAnimalEstimacao
+    public function cadastrar(AnimalEstimacaoInput $animalEstimacaoInput): bool
     {
         try {
             $entity = new EntityAnimalEstimacao($animalEstimacaoInput);
@@ -23,11 +23,9 @@ class AnimalEstimacaoRepository implements AnimalEstimacaoRepositoryInterface
             $model->sexo = $entity->getSexo();
             $model->peso = $entity->getPeso();
 
-            $model->save();
-            $animal = $model->refresh();
-            $entity->setId($animal->id);
+            $isSaved = $model->save();
 
-            return $entity;
+            return $isSaved;
         } catch (\Exception $e) {
             throw $e;
         }
@@ -37,7 +35,10 @@ class AnimalEstimacaoRepository implements AnimalEstimacaoRepositoryInterface
     {
         try {
             $animal = AnimalEstimacao::where('id', $id)->first();
-            $entity = new EntityAnimalEstimacao(new AnimalEstimacaoInput($animal->toArray()));
+            $animalFormated = $animal->toArray();
+            unset($animalFormated['id']);
+
+            $entity = new EntityAnimalEstimacao(new AnimalEstimacaoInput($animalFormated));
 
             return $entity;
         } catch (\Exception $e) {
@@ -50,6 +51,21 @@ class AnimalEstimacaoRepository implements AnimalEstimacaoRepositoryInterface
         try {
             return AnimalEstimacao::where('id', $id)->delete();
         } catch (\Exception $e) {
+            throw $e;
+        }
+    }
+
+    public function listar(): array
+    {
+        try {
+            $animais = AnimalEstimacao::all();
+            $animaisEntity = [];
+            foreach ($animais->all() as $index => $animal) {
+                $animaisInput = new AnimalEstimacaoInput($animal->getAttributes());
+                $animaisEntity[$index] = new EntityAnimalEstimacao($animaisInput);
+            }
+            return $animaisEntity;
+        } catch (\Exception $e){
             throw $e;
         }
     }

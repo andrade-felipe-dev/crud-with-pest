@@ -20,7 +20,7 @@ class CadastrarFormRequest extends FormRequest
             'especie' => 'required|string',
             'raca' => 'required|string',
             'peso' => 'required',
-            'idTutor' => 'required|integer'
+            'sexo' => 'required|string|in:Macho,Femea'
         ];
     }
 }

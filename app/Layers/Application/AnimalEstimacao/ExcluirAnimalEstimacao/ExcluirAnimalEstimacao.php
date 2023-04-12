@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Layers\Application\AnimalEstimacao;
+namespace App\Layers\Application\AnimalEstimacao\ExcluirAnimalEstimacao;
 
 use App\Exceptions\ClientException;
 use App\Layers\Model\AnimalEstimacaoRepositoryInterface;

@@ -4,7 +4,7 @@ namespace App\Layers\Application\AnimalEstimacao\DTO;
 
 class AnimalEstimacaoInput
 {
-    public readonly int $id;
+    private ?int $id;
     public readonly string $nome;
     public readonly string $dataNascimento;
     public readonly int $idade;
@@ -14,9 +14,8 @@ class AnimalEstimacaoInput
     public readonly float $peso;
 
     public function __construct(array $data) {
-        $this->id = $data['id'];
         $this->nome = $data['nome'];
-        $this->dataNascimento = $data['data_nascimento'];
+        $this->dataNascimento = $data['dataNascimento'];
         $this->idade = $data['idade'];
         $this->especie = $data['especie'];
         $this->raca = $data['raca'];
