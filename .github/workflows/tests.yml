@@ -3,7 +3,7 @@ name: Testes com PHP Pest
 on: ['push', 'pull_request']
  
 jobs:
-  ci:
+  tests-with-pest-unit:
     runs-on: ubuntu-latest
  
     steps:
