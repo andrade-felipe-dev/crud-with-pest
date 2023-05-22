@@ -17,8 +17,12 @@ jobs:
           tools: composer:v2
           coverage: xdebug
 
-      - name: Install Dependencies
-        run: composer install --no-interaction --prefer-dist --optimize-autoloader
+      - name: Install Composer Dependencies
+        run: |
+          cd back-end
+          composer install --no-interaction --prefer-dist --optimize-autoloader
 
-      - name: Script para rodar o pest
-        run: ./back-end/vendor/bin/pest
+      - name: Run Pest Tests
+        run: |
+          cd back-end
+          php vendor/bin/pest
