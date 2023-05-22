@@ -1,24 +1,24 @@
 name: Testes com PHP Pest
- 
+
 on: ['push', 'pull_request']
- 
+
 jobs:
   tests-with-pest-unit:
     runs-on: ubuntu-latest
- 
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
- 
+
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: 8.1
           tools: composer:v2
           coverage: xdebug
- 
+
       - name: Install Dependencies
         run: composer install --no-interaction --prefer-dist --optimize-autoloader
- 
+
       - name: Script para rodar o pest
-        run: ./vendor/bin/pest
+        run: ./backend/vendor/bin/pest
