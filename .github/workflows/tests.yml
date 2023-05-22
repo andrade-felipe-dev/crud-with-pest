@@ -21,4 +21,4 @@ jobs:
         run: composer install --no-interaction --prefer-dist --optimize-autoloader
 
       - name: Script para rodar o pest
-        run: ./backend/vendor/bin/pest
+        run: ./back-end/vendor/bin/pest
